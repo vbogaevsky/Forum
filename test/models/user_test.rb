@@ -37,7 +37,13 @@ class UserTest < ActiveSupport::TestCase
     assert user.invalid?
     assert_equal ["has already been taken"], user.errors[:email]
   end
-  test "cannot be admin and moderator semultanrously" do
-    
+  test "email should be correct" do
+    user = User.new(
+      handle: "ass",
+      email: "zxcvvb@mvcxx.com",
+      avatar: "av.jpg",
+      moderator: false,
+      admin: false)
+    assert user.valid?, "no @ in email adress"
   end
 end
