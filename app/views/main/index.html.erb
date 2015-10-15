@@ -1,20 +1,29 @@
+<%= stylesheet_link_tag "main.scss" %>
 <div id = "wrapper">
   <div id = "header">
     <%= link_to "Login" %>
     <%= link_to "Register" %>
   </div>
   <table id = "boards">
+    <th>Board name</th>
+    <th>Statistics</th>
+    <th>Last posts</th>
     <% @boards.each do |board| %>
-    <tr>
-      <%= board.name %>
-    </tr>
-    <tr>
-      <%= board.stat %>
-    </tr>
-    <tr>
-      <%= board.last_poster %>
-    </tr>
+      <tr><%= board.name %></tr>
+      <tr><%= board.stat %></tr>
+      <tr><%= board.last_poster %></tr>
     <% end %>  
   </table>
+  </div>
+  <div id = "footer">
+    <div id = "info">
+      <h3>Forum info</h3>
+    </div>
+    <div id = "sratistics">
+      <h3>Forum statistics</h3>
+    </div>
+    <div id = "populus">
+      <h3>Forum population</h3>
+    </div>
   </div>
 </div>
