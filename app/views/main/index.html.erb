@@ -4,18 +4,22 @@
     <%= link_to "Login" %>
     <%= link_to "Register" %>
   </div>
-  <table id = "boards">
-    <th>Board name</th>
-    <th>Statistics</th>
-    <th>Last posts</th>
-    <% @boards.each do |board| %>
-      <tr>  
-        <td><%= link_to board.name %></td>
-        <td><%= link_to board.stat %></td>
-        <td><%= link_to board.last_poster %></td>
-      </tr>  
-    <% end %>  
-  </table>
+  <div id = "table_wrapper">
+    <p><%= link_to "Create new board", 
+      controller: "main",
+      action: "newBoard"%></p>
+    <table id = "boards">
+      <th>Board name</th>
+      <th>Statistics</th>
+      <th>Last posts</th>
+      <% @boards.each do |board| %>
+        <tr>  
+          <td><%= link_to board.name %></td>
+          <td><%= link_to board.stat %></td>
+          <td><%= link_to board.last_poster %></td>
+        </tr>  
+      <% end %>  
+    </table>
   </div>
   <div id = "footer">
     <div class="outside">
