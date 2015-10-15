@@ -1,2 +1,20 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<div id = "wrapper">
+  <div id = "header">
+    <%= link_to "Login" %>
+    <%= link_to "Register" %>
+  </div>
+  <table id = "boards">
+    <% @boards.each do |board| %>
+    <tr>
+      <%= board.name %>
+    </tr>
+    <tr>
+      <%= board.stat %>
+    </tr>
+    <tr>
+      <%= board.last_poster %>
+    </tr>
+    <% end %>  
+  </table>
+  </div>
+</div>
