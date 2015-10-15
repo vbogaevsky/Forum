@@ -9,9 +9,11 @@
     <th>Statistics</th>
     <th>Last posts</th>
     <% @boards.each do |board| %>
-      <tr><%= board.name %></tr>
-      <tr><%= board.stat %></tr>
-      <tr><%= board.last_poster %></tr>
+      <tr>  
+        <td><%= link_to board.name %></td>
+        <td><%= link_to board.stat %></td>
+        <td><%= link_to board.last_poster %></td>
+      </tr>  
     <% end %>  
   </table>
   </div>
