@@ -1,2 +1,2 @@
 class Board < ActiveRecord::Base
-end
+	has_many :topicks
