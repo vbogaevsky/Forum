@@ -14,9 +14,10 @@
       <th>Last posts</th>
       <% @boards.each do |board| %>
         <tr>  
-          <td><%= link_to board.name %></td>
-          <td><%= link_to board.stat %></td>
-          <td><%= link_to board.last_poster %></td>
+          <td><%= link_to board.board_name %></td>
+          <td> Topics: <%= board.topicks %>
+          <br> Posts: <%= board.posts %></td>
+          <td> Last post:<%= link_to board.last_poster %></td>
         </tr>  
       <% end %>  
     </table>

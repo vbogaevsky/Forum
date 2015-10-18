@@ -5,4 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(handle: shower, )
+10.times do |t|
+  Board.create(board_name: 'Theme #{t}', topick_id: 'NULL')
+end
