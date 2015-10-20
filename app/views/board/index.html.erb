@@ -6,18 +6,15 @@
   </div>
   <div id = "table_wrapper">
     <p><%= link_to "Create new board", 
-      controller: "main",
+      controller: "board",
       action: "newBoard"%></p>
     <table id = "boards">
-      <th>Board name</th>
-      <th>Statistics</th>
-      <th>Last posts</th>
       <% @boards.each do |board| %>
         <tr>  
-          <td><%= link_to board.board_name %></td>
+          <td><%= board.board_name %></td>
           <td> Topics: <%= board.topicks %>
           <br> Posts: <%= board.posts %></td>
-          <td> Last post:<%= link_to board.last_poster %></td>
+          <td> Last post:<%= link_to "#{board.last_poster}", board.last_poster %></td>
         </tr>  
       <% end %>  
     </table>

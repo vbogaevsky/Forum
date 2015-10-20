@@ -1,9 +1,9 @@
 class CreateUsers < ActiveRecord::Migration
   def change
     create_table :users do |t|
-      t.text :handle, null: false
-      t.text :email, null: false
-      t.text :avatar
+      t.string :handle, null: false
+      t.string :email, null: false
+      t.string :avatar
       t.integer :post_id
       t.integer :topick_id
       t.boolean :moderator, null: false

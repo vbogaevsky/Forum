@@ -4,8 +4,8 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+post: {
+  message: "Not being a cow it's hard to tell exactly what goes through their heads but having worked with them my whole life I'd say I have as good of a chance of knowing as anyone. That said there are probably a lot of old cowboys and others out there who may claim to know more to which I say add on to my answer! : )",
+  user_id: 1,
+  topick_id: 1
+}
