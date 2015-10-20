@@ -5,11 +5,9 @@
 # below each fixture, per the syntax in the comments below
 #
 domestic_animals: {
-  board_name: "Domestic Animals",
-  topick_id: 1
+  name: "Domestic Animals",
 }
 
 wild_animals: {
-  board_name: "Wild Animals",
-  topick_id: 2
+  name: "Wild Animals",
 }

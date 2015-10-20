@@ -11,10 +11,10 @@
     <table id = "boards">
       <% @boards.each do |board| %>
         <tr>  
-          <td><%= board.board_name %></td>
+          <td><%= board.name %></td>
           <td> Topics: <%= board.topicks %>
-          <br> Posts: <%= board.posts %></td>
-          <td> Last post:<%= link_to "#{board.last_poster}", board.last_poster %></td>
+          <br> Posts: </td>
+          <td> Last post:</td>
         </tr>  
       <% end %>  
     </table>
