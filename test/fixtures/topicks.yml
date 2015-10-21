@@ -1,5 +1,6 @@
 cows: {
   theme: "Cows",
   post_id: 1,
-  user_id: 1
+  user_id: 1,
+  board_id: 1
 }

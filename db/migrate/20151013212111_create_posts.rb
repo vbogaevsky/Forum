@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :message, null: false
       t.integer :user_id, null: false
       t.integer :topick_id, null: false
+      t.integer :board_id, null: false
       t.timestamps null: false
     end
   end

@@ -17,38 +17,45 @@ ActiveRecord::Schema.define(version: 20151013212347) do
   enable_extension "plpgsql"
 
   create_table "boards", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name",          null: false
     t.string   "topick_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "topicks_count"
+    t.integer  "post_id"
+    t.integer  "posts_count"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "posts", force: :cascade do |t|
     t.string   "message",    null: false
     t.integer  "user_id",    null: false
     t.integer  "topick_id",  null: false
+    t.integer  "board_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "topicks", force: :cascade do |t|
-    t.string   "theme",      null: false
-    t.integer  "post_id",    null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "theme",       null: false
+    t.integer  "post_id",     null: false
+    t.integer  "posts_count"
+    t.integer  "user_id",     null: false
+    t.integer  "board_id",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "handle",     null: false
-    t.string   "email",      null: false
+    t.string   "handle",      null: false
+    t.string   "email",       null: false
     t.string   "avatar"
     t.integer  "post_id"
+    t.integer  "posts_count"
     t.integer  "topick_id"
-    t.boolean  "moderator",  null: false
-    t.boolean  "admin",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "moderator",   null: false
+    t.boolean  "admin",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

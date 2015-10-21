@@ -11,12 +11,12 @@
     <table id = "boards">
       <% @boards.each do |board| %>
         <tr>  
-          <td><%= board.name %></td>
-          <td> Topics: <%= board.topicks %>
-          <br> Posts: </td>
-          <td> Last post:</td>
+          <td><%=link_to "#{board.name}", board.name %></td>
+          <td> Topicks: <%= board.topicks.size %>
+          <br> Posts: <%= board.posts.size %></td>
+          <td> Last post: <%= board.posts.last[:user_id] %></td>
         </tr>  
-      <% end %>  
+      <% end %> 
     </table>
   </div>
   <div id = "footer">

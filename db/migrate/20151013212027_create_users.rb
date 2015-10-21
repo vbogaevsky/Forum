@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email, null: false
       t.string :avatar
       t.integer :post_id
+      t.integer :posts_count
       t.integer :topick_id
       t.boolean :moderator, null: false
      	t.boolean :admin, null: false
