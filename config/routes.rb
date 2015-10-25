@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root 'board#index'
-  get 'board/newBoard' => 'board#newBoard'
+  root 'boards#index'
+  get 'boards' => 'boards#index'
+  get '/boards/:id'=> 'board#show', as: :board
+
+  get 'boards/newBoard' => 'boards#newBoard'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

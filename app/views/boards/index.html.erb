@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "boards.scss" %>
+<div id = "wrapper">
+  <div id = "header">
+    <%= link_to "Login" %>
+    <%= link_to "Register" %>
+  </div>
+  <div id = "table_wrapper">
+    <p><%= link_to "Create new board", 
+      controller: "boards",
+      action: "newBoard"%></p>
+    <table id = "boards">
+      <% @boards.reverse.each do |board| %>
+        <tr>  
+          <td><%=link_to "#{board.name}", board_path(board) %></td>
+          <td> Topicks: <%= board.topicks.size %>
+          <br> Posts: <%= board.posts.size %></td>
+          <td> Last post: <%= board.posts.last.user.handle%>
+          <br> On: <%= board.posts.last.updated_at %>
+          </td>
+        </tr>  
+      <% end %> 
+    </table>
+  </div>
+  <div id = "footer">
+    <div class="outside">
+      <h3>Forum info</h3>
+      <div class="inside"></div>
+    </div>
+    <div class="outside">
+      <h3>Forum statistics</h3>
+      <div class="inside"></div>
+    </div>
+    <div class="outside">
+      <h3>Forum population</h3>
+      <div class="inside"></div>
+    </div>
+  </div>
+</div>

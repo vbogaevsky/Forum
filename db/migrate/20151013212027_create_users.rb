@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :topick_id
       t.boolean :moderator, null: false
      	t.boolean :admin, null: false
+      t.timestamp :updated_at, null: false
       t.timestamps null: false
     end
   end

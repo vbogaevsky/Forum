@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20151013212347) do
     t.integer  "user_id",    null: false
     t.integer  "topick_id",  null: false
     t.integer  "board_id",   null: false
-    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "created_at", null: false
   end
 
   create_table "topicks", force: :cascade do |t|
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20151013212347) do
     t.integer  "posts_count"
     t.integer  "user_id",     null: false
     t.integer  "board_id",    null: false
-    t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "created_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,8 +54,8 @@ ActiveRecord::Schema.define(version: 20151013212347) do
     t.integer  "topick_id"
     t.boolean  "moderator",   null: false
     t.boolean  "admin",       null: false
-    t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "created_at",  null: false
   end
 
 end

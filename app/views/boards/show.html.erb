@@ -1,20 +1,20 @@
-<%= stylesheet_link_tag "main.scss" %>
+<%= stylesheet_link_tag "boards.scss" %>
 <div id = "wrapper">
   <div id = "header">
     <%= link_to "Login" %>
     <%= link_to "Register" %>
   </div>
   <div id = "table_wrapper">
-    <p><%= link_to "Create new board", 
-      controller: "board",
-      action: "newBoard"%></p>
-    <table id = "boards">
-      <% @boards.each do |board| %>
+    <p><%= link_to "Start new topick", 
+      controller: "topicks",
+      action: "newTopick"%></p>
+    <table id = "topicks">
+      <% @topicks.each do |topick| %>
         <tr>  
-          <td><%=link_to "#{board.name}", board.name %></td>
-          <td> Topicks: <%= board.topicks.size %>
-          <br> Posts: <%= board.posts.size %></td>
-          <td> Last post: <%= board.posts.last[:user_id] %></td>
+          <td><%=link_to "#{topick.theme}", board_path(topick) %></td>
+          <td> Last post: <%= topick.posts.last.user.handle%>
+          <br> On: <%= topick.posts.last.updated_at %>
+          </td>
         </tr>  
       <% end %> 
     </table>
