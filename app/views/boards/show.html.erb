@@ -11,7 +11,7 @@
     <table id = "topicks">
       <% @topicks.each do |topick| %>
         <tr>  
-          <td><%=link_to "#{topick.theme}", board_path(topick) %></td>
+          <td><%=link_to "#{topick.theme}" %></td>
           <td> Last post: <%= topick.posts.last.user.handle%>
           <br> On: <%= topick.posts.last.updated_at %>
           </td>
@@ -20,17 +20,5 @@
     </table>
   </div>
   <div id = "footer">
-    <div class="outside">
-      <h3>Forum info</h3>
-      <div class="inside"></div>
-    </div>
-    <div class="outside">
-      <h3>Forum statistics</h3>
-      <div class="inside"></div>
-    </div>
-    <div class="outside">
-      <h3>Forum population</h3>
-      <div class="inside"></div>
-    </div>
   </div>
 </div>

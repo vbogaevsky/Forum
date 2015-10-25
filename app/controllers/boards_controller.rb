@@ -5,10 +5,13 @@ class BoardsController < ApplicationController
   end
   def show
     @board = Board.find(params[:id])
-    @topics = @board.topics
+    @topicks = @board.topicks.all
   end
   def newBoard
     board = Board.create name, topick_id
     @boards << board
+  end
+  def showTopick
+    
   end
 end
