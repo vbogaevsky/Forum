@@ -11,7 +11,4 @@ class BoardsController < ApplicationController
     board = Board.create name, topick_id
     @boards << board
   end
-  def showTopick
-    
-  end
 end

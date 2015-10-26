@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'boards#index'
   get 'boards' => 'boards#index'
   get '/boards/:id'=> 'boards#show', as: :board
-  get '/boards/:id/:topick' => 'topicks#index'
+  get '/topicks/:id' => 'topicks#index', as: :topick
   get 'boards/newBoard' => 'boards#newBoard'
   get 'boards/:id/newTopick' => 'topicks#newTopick'
   # The priority is based upon order of creation: first created -> highest priority.

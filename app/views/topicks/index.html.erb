@@ -1,0 +1,23 @@
+<div id = "wrapper">
+  <div id = "header">
+    <%= link_to "Login" %>
+    <%= link_to "Register" %>
+  </div>
+  <div id = "table_wrapper">
+    
+    <table id = "topicks">
+      <% @posts.each do |post| %>
+        <tr>  
+          <td><h3><%= post.user.handle %></h3>
+          <br> <%= image_path post.user.avatar %> 
+          </td>
+          <td> <h4><p><%= post.message %></p></h4>
+          <br> <h5><p>Last redacted at: <%= post.updated_at %></p></h5>
+          </td>
+        </tr>  
+      <% end %> 
+    </table>
+  </div>
+  <div id = "footer">
+  </div>
+</div>

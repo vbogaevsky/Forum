@@ -11,7 +11,7 @@
     <table id = "topicks">
       <% @topicks.each do |topick| %>
         <tr>  
-          <td><%=link_to "#{topick.theme}" %></td>
+          <td><%= link_to "#{topick.theme}", topick_path(topick)%></td>
           <td> Last post: <%= topick.posts.last.user.handle%>
           <br> On: <%= topick.posts.last.updated_at %>
           </td>
