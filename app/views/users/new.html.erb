@@ -1,0 +1,11 @@
+<div id="wrapper">
+  <div id="register_form">
+    <%= form_for(@user) do |f|  %>
+      <%= f.text_field :handle, placeholder: "Handle" %>
+      <%= f.text_field :email, placeholder: "Email" %>
+      <%= f.password_field :password, placeholder: "Password" %>
+      <%= f.password_field :password_conformation, placeholder: "Repeat password" %>
+      <%= f.submit "Creat an account", id: "btn-subm" %>
+    <% end %>
+  </div>
+</div>

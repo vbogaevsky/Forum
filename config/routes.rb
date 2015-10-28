@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/topicks/:id' => 'topicks#index', as: :topick
   get 'boards/newBoard' => 'boards#newBoard'
   get 'boards/:id/newTopick' => 'topicks#newTopick'
+  get '/register' => 'users#new'
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -10,8 +10,8 @@ Board.delete_all
 Topick.delete_all
 Post.delete_all
 
-User.create! handle: "auxilla", email: "auxilla@google.com", moderator: false, admin: false
-User.create! handle: "helper", email: "helper@gmail.com", moderator: false, admin: false
+User.create! handle: "auxilla", email: "auxilla@google.com", password: "12345678"
+User.create! handle: "helper", email: "helper@gmail.com", password: "87654321"
 Board.create! name: "Animals"
 Board.create! name: "Plants"
 Board.create! name: "Bacteria"

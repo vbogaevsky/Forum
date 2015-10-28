@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_secure_password
   has_many :topicks
   has_many :posts
   validates :handle, presence: true, uniqueness: true

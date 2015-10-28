@@ -46,16 +46,17 @@ ActiveRecord::Schema.define(version: 20151013212347) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "handle",      null: false
-    t.string   "email",       null: false
+    t.string   "handle",                          null: false
+    t.string   "email",                           null: false
     t.string   "avatar"
+    t.string   "password_digest",                 null: false
     t.integer  "post_id"
     t.integer  "posts_count"
     t.integer  "topick_id"
-    t.boolean  "moderator",   null: false
-    t.boolean  "admin",       null: false
-    t.datetime "updated_at",  null: false
-    t.datetime "created_at",  null: false
+    t.boolean  "moderator",       default: false, null: false
+    t.boolean  "admin",           default: false, null: false
+    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                      null: false
   end
 
 end
