@@ -1,8 +1,20 @@
 <%= stylesheet_link_tag "boards.scss" %>
 <div id = "wrapper">
   <div id = "header">
-    <%= link_to "Login" %>
-    <%= link_to "Register", '/register' %>
+    <% if current_user %>
+      <h4>
+        <%= current_user.handle %> <%= link_to "Log out", logout_path, method: "delete" %>
+      </h4>
+    <% else %>
+      <h4>
+        <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.email_field :email, placeholder: "Email" %>
+        <%= f.password_field :password, placeholder: "password" %>
+        <%= f.submit "Login", id: "btn-subm" %>
+        <% end %>
+        or you can <%= link_to "register", '/register' %>, if you have not yet.
+      </h4>
+    <%end%>  
   </div>
   <div id = "table_wrapper">
     <p><%= link_to "Create new board", 
