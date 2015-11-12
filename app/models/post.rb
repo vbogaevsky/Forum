@@ -5,4 +5,5 @@ class Post < ActiveRecord::Base
   validates :message, presence: true
   validates :user_id, presence: true
   validates :topick_id, presence: true
+	validates :board_id, presence: true
 end
